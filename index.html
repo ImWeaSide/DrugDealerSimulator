@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Dealer Simulator</title>
+
+    <!-- Liens vers Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <!-- Liaison vers votre fichier CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Metadonnées pour une description lors du partage -->
+    <meta property="og:title" content="Drug Dealer Simulator">
+    <meta property="og:description" content="Explorez le monde du simulateur de trafiquant de drogue. Téléchargez maintenant et plongez dans une aventure captivante.">
+    <meta property="og:image" content="https://imgs.search.brave.com/jr4jIaKfDpDNajk6ML-rI_nInYTgwgY0i2k8mHiDxug/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vdXBsb2Fk/cy5mcmVlZ29ncGNn/YW1lcy5jb20vaW1h/Z2UvRHJ1Zy1EZWFs/ZXItU2ltdWxhdG9y/LmpwZz9yZXNpemU9/Njc4LDM4MSZzc2w9/MQ" /> <!-- Remplacez par l'URL de l'image représentative de votre page -->
+    <meta property="og
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-left">
+                    <a href="index.html" class="navbar-button">Home</a>
+                </div>
+                <div class="navbar-right">
+                    <a href="Drug Dealer.zip" download class="navbar-button">DOWNLOAD</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="carousel">
+                <img src="Drug-Dealer-Simulator.jpg" alt="Image 1">
+                <img src="Drug-Dealer-Simulator.jpg" alt="Image 1">
+                <img src="station.jpeg" alt="Image 2">
+                <img src="station.jpeg" alt="Image 2">
+                <img src="dehors.jpg" alt="Image 3">
+                <img src="Drug-Dealer-Simulator.jpg" alt="Image 1">
+                <img src="Drug-Dealer-Simulator.jpg" alt="Image 1">
+            </div>
+            <button class="carousel-btn" id="prevBtn">&lt;</button>
+            <button class="carousel-btn" id="nextBtn">&gt;</button>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="content">
+            <a href="Drug Dealer.zip" download class="download-button">DOWNLOAD</a>
+        </div>
+    </main>
+
+    <footer class="footer-container">
+        <div class="left">
+            <p class="animated-text">
+                WHAT IS DRUG DEALER SIMULATOR ?
+                
+                <br>
+                🌟 Immerse yourself in "Drug Dealer Simulator," a gripping game that propels you into the heart of the underworld. <br>
+                🌟 Navigate the dangers of the narcotics trade, making strategic decisions to build your criminal empire. <br>
+                🌟 Customize your character, manage resources, and outsmart rivals. Engage in high-stakes deals and alliances while facing the constant threat of law enforcement. <br>
+                🌟 Your choices shape the narrative, leading to diverse outcomes in this realistic depiction of the drug trade. <br>
+                🌟 "Drug Dealer Simulator" combines strategy and narrative gameplay. Will you build alliances or go solo? <br>
+                🌟 The dynamic storyline adapts to your choices, offering a unique and unpredictable journey. Dive into the gritty urban landscape and rise to become the undisputed kingpin.
+            </p>
+        </div>
+        <div class="left">
+            <p class="animated-text">
+                🌟 Alcohol. <br>
+                <br>
+                <br>
+                🌟 Drug. <br>
+                <br>
+                <br>
+                🌟 Weapon and Armor. <br>
+                <br>
+                <br>
+                🌟 Weed. <br>
+                <br>
+                <br>
+                🌟 Robbery <br>
+                <br>
+                <br>
+                🌟 Car,boat and Helicopter.</p>
+        </div>
+    </footer>
+
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('.carousel');
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+    
+            let currentIndex = 0;
+    
+            nextBtn.addEventListener('click', () => {
+                if (currentIndex < carousel.children.length - 1) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+    
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+    
+            function updateCarousel() {
+                const translateValue = -currentIndex * 100 + '%';
+                carousel.style.transform = 'translateX(' + translateValue + ')';
+    
+                // Désactiver le bouton "Next" à la dernière image
+                nextBtn.disabled = currentIndex === carousel.children.length - 1;
+                // Désactiver le bouton "Prev" à la première image
+                prevBtn.disabled = currentIndex === 0;
+            }
+    
+            // Désactiver le bouton "Next" initialement s'il est à la dernière image
+            updateCarousel();
+        });
+    </script>>
+    
+    
+
+</body>
+
+</html>
